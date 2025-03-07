@@ -82,9 +82,22 @@
         @font-face {
             font-family: 'Open Sans';
             font-display: swap;
-            src: url('fonts/opensans.woff2') format('woff2');
+            src: local('Open Sans'), url('fonts/opensans.woff2') format('woff2');
         }
-        /* Add other critical styles */
+        
+        /* Add critical layout CSS */
+        .navbar {
+            padding: 0.2rem 2rem !important;
+            max-width: 1440px;
+            margin: 0px auto;
+        }
+        
+        /* Add other critical styles that prevent layout shifts */
+        .hero-section {
+            min-height: 400px;
+        }
+        
+        /* Remove all non-critical styles from here */
     </style>
     
     <!-- Preload critical assets -->
@@ -128,6 +141,27 @@
         "logo": "https://rangamworks.com/images/logo.png"
     }
     </script>
+
+    <!-- Inline critical CSS -->
+    <style>
+      /* Copy contents of critical.css here */
+    </style>
+    
+    <!-- Preload fonts -->
+    <link rel="preload" 
+          href="/fonts/opensans.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossorigin>
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" 
+          href="css/combined.min.css" 
+          media="print" 
+          onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="css/combined.min.css">
+    </noscript>
 </head>
 <body>
 
@@ -182,12 +216,16 @@
       <nav class="navbar navbar-expand-xl navbar-light" aria-label="Main navigation">
         <div class="container-fluid">
           <a class="navbar-brand m-0 p-0" href="/portal/oh" aria-current="page">
-            <img
-              class="navbar-logo img-fluid"
-              src="images/logo.png"
-              alt="RangamWorks logo"
-              width="140"
-            />
+            <picture>
+                <source srcset="images/logo.avif" type="image/avif">
+                <source srcset="images/logo.webp" type="image/webp">
+                <img class="navbar-logo img-fluid"
+                     src="images/logo.png"
+                     alt="RangamWorks logo"
+                     width="140"
+                     height="35"
+                     fetchpriority="high">
+            </picture>
           </a>
           <button
             class="navbar-toggler"
@@ -379,12 +417,20 @@
                 <div class="col-xxl-10 col-xl-11 col-12">
                     <div class="home-search-block" role="search">
                         <div class="job-keyword-input">
-                            <img class="high-contrast-white" src="images/search-icon.svg" alt="">
+                            <img class="high-contrast-white" 
+                                 src="images/search-icon.svg" 
+                                 alt=""
+                                 width="24" 
+                                 height="24">
                             <label for="keywords" class="form-label">Search Job Title or Keywords</label>
                             <input maxlength="200" type="text" id="keywords" name="keywords" class="form-control" aria-label="Search Job Title or Keywords" placeholder="Search Job Title or Keywords">
                         </div>
                         <div class="city-state">
-                            <img class="high-contrast-white" src="images/map-marker.svg" alt="">
+                            <img class="high-contrast-white" 
+                                 src="images/map-marker.svg" 
+                                 alt=""
+                                 width="24" 
+                                 height="24">
                             <input id="location" name="location" type="text" class="form-control" aria-label="City, State" placeholder="City, State">
                         </div>
                         <div class="submit-btn text-center">
@@ -776,31 +822,24 @@
         var UrlLocationByShortName = '/portal/oh/Base/GetLocationByShortName';
     </script>
 
-    <!-- Load essential scripts first -->
+    <!-- Move all scripts to end of body -->
+    <script>
+        // Inline critical JS
+        document.documentElement.classList.remove('no-js');
+    </script>
+
+    <!-- Load essential scripts with modern attributes -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-            crossorigin="anonymous" defer></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-    
-    <!-- Combine and minify non-critical scripts -->
-    <script type="module" src="js/combined.min.js" defer></script>
-    
-    <!-- Remove or defer non-essential scripts -->
-    <!-- Remove duplicate jQuery loading -->
-    <!-- Combine small JS files -->
+            crossorigin="anonymous" 
+            defer
+            fetchpriority="low"></script>
 
-    <script>
-        // Defer chatbot loading
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                // Load chatbot after 2 seconds
-                loadChatbot();
-            }, 2000);
-        });
-        
-        function loadChatbot() {
-            // Your existing chatbot loading code
-        }
-    </script>
+    <!-- Combine all other scripts into one file -->
+    <script src="js/combined.min.js" 
+            defer 
+            fetchpriority="low"></script>
+
+    <!-- Remove all other script tags -->
 </body>
 </html>

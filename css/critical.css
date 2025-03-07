@@ -1,0 +1,36 @@
+/* Critical styles that prevent layout shifts */
+:root {
+  --primary: #0C61E7;
+  --secondary: #2A42E4;
+  --white: #fff;
+  --black: #000;
+}
+
+/* Critical layout styles */
+.navbar {
+  background: var(--white);
+  padding: 0.2rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Critical form styles */
+.form-control {
+  border: 1px solid #A4C5F9;
+  padding: 0.5rem 1rem;
+}
+
+/* Critical typography */
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: local('Open Sans'), url('/fonts/opensans.woff2') format('woff2');
+} 
