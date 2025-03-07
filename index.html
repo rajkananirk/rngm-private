@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-    <meta http-equiv="PRAGMA" content="NO-CACHE">
-    <meta http-equiv="EXPIRES" content="0">
-
-    <!--  Javascript Declaration   -->
-    <meta name="format-detection" content="telephone=yes">
-    <meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8">
-    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=2.0,initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="MobileOptimized" content="320">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Remove duplicate meta tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Find your dream job with RangamWorks. Access exclusive job listings and career resources.">
+    
+    <title>Home | RangamWorks</title>
 
-    <title>
-             Home | RangamWorks
-    </title>
-
-    <!--  START: SEO Meta Tag   -->
-        <meta name="robots" content="noindex, nofollow">
-        <meta name="googlebot" content="noindex, nofollow">
-
-    <!--  END: SEO Meta Tag   -->
-
-    <link rel="icon" href="images/favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="css/critical.min.css" as="style">
+    <link rel="preload" href="lib/bootstrap/css/bootstrap.min.css" as="style">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://staging.rangamworks.com" crossorigin>
+    
+    <!-- Inline critical CSS -->
+    <style>
+        /* Minimal critical CSS */
+        :root{--primary:#0C61E7;--white:#fff}
+        body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
+        .navbar{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:.5rem}
+        .navbar-logo{width:140px;height:40px}
+        .search-section{background:var(--primary);padding:2rem 0}
+        .btn-primary{background:var(--primary);color:var(--white);padding:.5rem 1.5rem;border-radius:8px;text-decoration:none}
+        .form-control{width:100%;padding:.5rem;border-radius:8px;border:1px solid #ddd}
+    </style>
 
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
-        <link href="lib/bootstrap/css/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="lib/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
-    <link href="lib/ladda/dist/ladda-themeless.min.css" rel="stylesheet" />
-    <link href="lib/izitoast/izitoast.min.css" rel="stylesheet" />
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
 
-
+    <!-- Defer non-critical scripts -->
+    <script defer src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script defer src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Remove duplicate CSS files -->
     <link href="critical.css" rel="stylesheet" />
     <link href="var.css?v=TDJzTUo8zkO9Opi9SZmLPkq8tltQ4KYjEhz1JEyKcTk" rel="stylesheet" />
     <link href="controls.css?v=_9xFW-eGNUdMaD75uSKM1Bkw0pTS7sDHkqedH7T9GU8" rel="stylesheet" />
@@ -387,7 +387,7 @@
             />               
             </div>
             <div class="hero-right col-lg-6 text-center text-lg-end mt-4 mt-lg-0 d-none d-md-block">
-                <img class="what-it-takes-img mw-100" src="images/what-it-takes.png" alt="" title="">
+                <img class="what-it-takes-img mw-100" src="images/what-it-takes.png" alt="" title="" loading="lazy" width="600" height="400">
             </div>
         </div>
     </div>
@@ -739,172 +739,21 @@
     </script>
 
     <script src="portal/lib/jquery/jquery-3.7.0.min.js"></script>
-    <script src="portal/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="portal/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="portal/lib/ladda/dist/spin.min.js"></script>
-    <script src="portal/lib/ladda/dist/ladda.min.js"></script>
-    <script src="portal/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="portal/lib/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="portal/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-
-    <script src="portal/lib/loadingoverlay/loadingoverlay.min.js"></script>
-    <script src="portal/lib/izitoast/izitoast.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
-
-    <script src="portal/lib/tagify/tagify.min.js"></script>
-    <script src="portal/scripts/site.js?v=If2US5Jr7PgdDJe_XgQdscpaokzwjzYUyCoNNaG4ZAo"></script>
-    <script src="portal/scripts/passcode.js?v=a4ByePID8f3LYwz0i4ooB2nh6SPRFb84UMsDmQZomO4"></script>
-    <script src="js/site.js?v=NdiRo61q0gjTIlzS09C2fBESB7UDL_8Q6uMFiAOhvsM"></script>
-    <script src="portal/scripts/tagify-location.js?v=KBGD_9pQ9GpMJhRg_sYCVwWE0axrsnZm2N2KmsyQC9k"></script>
-
     
-    <script src="portal/scripts/geo-location-jobs.js?v=P-H1zEiHejx7NTzKw6EWaDwfTUvCpAVL5pdoYD21Pic"></script>
-
-
-    <script src="portal/scripts/custom.js?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U"></script>
-
+    <!-- Defer non-critical scripts -->
+    <script defer src="portal/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script defer src="portal/lib/ladda/dist/spin.min.js"></script>
+    <script defer src="portal/lib/ladda/dist/ladda.min.js"></script>
+    <script defer src="portal/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     
-
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<script>
-
-    // Make an AJAX request to fetch the chatbot HTML
-    $.ajax({
-        url: 'https://chatarbor.rangamworks.com/indexrw.html',
-        type: "GET",
-        header: { "Access-Control-Allow-Origin": "*" },
-        crossDomain: true,
-        success: function (data) {
-            // Inject the fetched HTML into the container
-            $('#chatbot-artie').html(data);
-        },
-        error: function (xhr, status, error) {
-            // Handle errors here
-            console.log("Error loading chatbot HTML:", error);
-        }
-    }).done(() => {
-        $("#loader").hide();
-    });
-
-    function sendUserDetails() {
-        var tokenCB = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikd1ZXN0IiwiZG9tYWluIjoicmFuZ2Ftd29ya3MuY29tIiwiZW1haWwiOiIiLCJ0b2tlbl9pZCI6IjlmN2QyOGNjLTY2OTktNDAzMy1iMDdlLWM5Y2IwZTFkNWU0MyIsImV4cCI6MTc0MTk1MjI5MX0.hKYkhU4z0oaVVv8AKpOE71j1N62sc314oDF5RtWy5ys';
-        //if (tokenCB != undefined || tokenCB != null) {
-        updateCookie('_gatokenCB', tokenCB)
-        // }
-    }
-
-    function setchatCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        var cVal = document.cookie;
-        cVal += cname.trim() + "=" + cvalue.trim() + ";" + expires + ";path=/;secure;";
-        document.cookie = cVal;
-    }
-
-    // Function to check if a cookie exists
-    function checkCookie(cookieName) {
-        // Split the document.cookie string into individual cookies
-        var cookies = document.cookie.split('; ');
-
-        // Loop through the cookies to find the specified cookie
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].split('=');
-
-            // Trim any leading or trailing spaces in the cookie name
-            var name = cookie[0].trim();
-
-            // Check if the cookie name matches the specified name
-            if (name === cookieName) {
-                return true; // Cookie found
-            }
-        }
-
-        return false; // Cookie not found
-    }
-
-    // Function to update the value of a cookie
-    function updateCookie(cookieName, newValue) {
-        // Check if the cookie exists
-        if (checkCookie(cookieName)) {
-            // Split the document.cookie string into individual cookies
-            var cookies = document.cookie.split('; ');
-
-            // Loop through the cookies to find and update the specified cookie
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].split('=');
-
-                // Trim any leading or trailing spaces in the cookie name
-                var name = cookie[0].trim();
-
-                // Check if the cookie name matches the specified name
-                if (name === cookieName) {
-                    // Update the cookie value
-                    //document.cookie = name + '=' + newValue;
-                    var cVal = document.cookie;
-                    var d = new Date();
-                    d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
-                    var expires = "expires=" + d.toUTCString();
-                    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                    cVal = name + "=" + newValue + ";" + expires + ";path=/;secure;";
-                    document.cookie = cVal;
-                    break;
-                }
-            }
-        } else {
-            setchatCookie(cookieName, newValue, 1);
-        }
-    }
-
-</script>
-
-<div id="chatbot-artie"></div>
-<link href="portal/css/chatarbor.css" rel="stylesheet" />
-<script>
-
-    window.addEventListener('load', function () {
-        sendUserDetails();
-
-        var chat_id = localStorage.getItem('chat_id_Generated');
-
-        if (0 > 0 && chat_id == null) {
-            localStorage.setItem('chat_id_Generated', true);
-            RegenerateInitialize();
-        }
-
-        function RegenerateInitialize() {
-            var storedValue = "Bearer " + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikd1ZXN0IiwiZG9tYWluIjoicmFuZ2Ftd29ya3MuY29tIiwiZW1haWwiOiIiLCJ0b2tlbl9pZCI6IjlmN2QyOGNjLTY2OTktNDAzMy1iMDdlLWM5Y2IwZTFkNWU0MyIsImV4cCI6MTc0MTk1MjI5MX0.hKYkhU4z0oaVVv8AKpOE71j1N62sc314oDF5RtWy5ys';
-
-            //if (flg == false) {
-            fetch('https://chatarboradmin.rangamworks.com/api/chatbot/initialize/', {
-                method: 'GET',
-                headers: {
-                    'Authorization': storedValue,
-                    'Content-Type': 'application/json'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    localStorage.setItem('chat_id', data.data.chat_id);
-                })
-                .catch(error => {
-                    console.log('Error:', error);
-                });
-        }
-    });
-
-</script>
-
-<script>
-    window.addEventListener('load', () => {
-        // Log performance metrics
-        const navigation = performance.getEntriesByType('navigation')[0];
-        console.log(`Page Load Time: ${navigation.loadEventEnd}ms`);
-    });
-</script>
-
+    <!-- Add performance monitoring -->
+    <script>
+        window.addEventListener('load', () => {
+            // Log performance metrics
+            const navigation = performance.getEntriesByType('navigation')[0];
+            console.log(`Page Load Time: ${navigation.loadEventEnd}ms`);
+        });
+    </script>
 </body>
 </html>
