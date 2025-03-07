@@ -99,14 +99,10 @@
         text-decoration: none;
     }
 
-.password-field .form-control.input-validation-error {
-    padding-right: 110px;
+.password-field .input-validation-error ~ .password-toggle {
+    right: 40px;
 }
 
-    .password-field .form-control.input-validation-error + .show-password, .password-field .form-control.input-validation-error + .show-password + .hide-password {
-        right: 40px;
-    }
-/* Password field css ends */
 .form-check.checkbox {
     padding-left: 2rem;
 }

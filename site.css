@@ -1102,3 +1102,16 @@ body {
     .grecaptcha-badge:hover {
         width: 256px !important;
     }
+
+/* Add font-display to optimize font loading */
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    /* existing properties */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-display: swap;
+    /* existing properties */
+}

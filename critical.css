@@ -1,0 +1,43 @@
+/* Add critical styles needed for above-the-fold content */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 103;
+    background: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    contain: content;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px; /* Adjust based on your content */
+}
+
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Lazy load images */
+img.lazy {
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+img.lazy.loaded {
+    opacity: 1;
+}
+
+main {
+    contain: layout style paint;
+} 
