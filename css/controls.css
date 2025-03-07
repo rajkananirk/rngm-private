@@ -1,0 +1,130 @@
+.btn-primary {
+    border-radius: 8px;
+    border: 1.5px solid var(--white);
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 6px 40px;
+}
+
+.btn-secondary {
+    border-radius: 8px;
+    border: 1.5px solid #0C61E7;
+    background: #EEF2FC;
+    color: #0C61E7;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 6px 40px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #A4C5F9;
+    background: #FFF;
+    color: #737373;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #A4C5F9;
+    color: #2D2C2F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    padding: .375rem 2.25rem .375rem .75rem;
+    height: 39px;
+}
+
+.form-label {
+    color: #55627B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #DA1010;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.3px;
+}
+
+/* Password field css starts */
+.password-field {
+    position: relative;
+}
+
+    .password-field .form-control {
+        padding-right: 80px;
+    }
+
+.hide-password {
+    display: none;
+}
+
+.show-password, .hide-password {
+    position: absolute;
+    top: 37px;
+    right: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: 0px;
+}
+
+    .show-password span, .hide-password span {
+        color: #0C61E7 !important;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        text-decoration: none;
+    }
+
+.password-field .form-control.input-validation-error {
+    padding-right: 110px;
+}
+
+    .password-field .form-control.input-validation-error + .show-password, .password-field .form-control.input-validation-error + .show-password + .hide-password {
+        right: 40px;
+    }
+/* Password field css ends */
+.form-check.checkbox {
+    padding-left: 2rem;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0px;
+    border-color: #55627B;
+    border-width: 2px;
+    width: 20px;
+    height: 20px;
+    margin-left: -2rem;
+}
+
+.checkbox .form-check-label {
+    color: #55627B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.3px;
+}

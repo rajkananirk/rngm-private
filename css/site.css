@@ -1,0 +1,1104 @@
+body {
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif !important;
+    background: var(--bodybg);
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+/* Homepage search section css starts */
+.search-section {
+    margin: 70px 0px 100px;
+    display: inline-block;
+    width: 100%;
+}
+
+.home-search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1.5px solid #c6c7c9;
+    box-shadow: 0px 2px 8.8px 0px #939393;
+    padding: 6px;
+    gap: 10px;
+}
+
+.job-keyword-input,
+.city-state {
+    position: relative;
+    width: 40%;
+}
+
+    .job-keyword-input img,
+    .city-state img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        z-index: 1;
+    }
+
+    .job-keyword-input input,
+    .city-state input {
+        padding-left: 40px;
+        border: 0px;
+        box-shadow: 0px 0px 0px;
+    }
+
+.job-keyword-input {
+    border-right: 1.5px solid #b4b4b4;
+    padding-right: 18px;
+}
+
+.home-search-block input,
+.home-search-block .tagify.form-control {
+    background: transparent;
+}
+/* Homepage search section css ends */
+/* What it takes section css starts */
+.what-it-takes-section {
+    margin-bottom: 100px;
+}
+
+.what-it-takes h2 {
+    color: #0d0e38;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.what-it-takes p {
+    color: #55627b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    max-width: 535px;
+}
+/* What it takes section css ends */
+/* How can help section css starts */
+.how-can-help-section {
+    margin-bottom: 100px;
+    background: #f6fafc;
+    padding: 70px 0px;
+}
+
+.how-can-help-img {
+    mix-blend-mode: darken;
+}
+
+.how-can-help h2 {
+    color: #0d0e38;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 520px;
+    margin-bottom: 54px;
+}
+
+.how-can-help ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .how-can-help ul li {
+        color: #55627b;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: flex-start;
+    }
+
+.how-can-help .btns a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+    .how-can-help .btns a:last-child {
+        margin-bottom: 0px;
+    }
+/* How can help section css ends */
+/* Right job section css starts */
+.find-right-job-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+    .find-right-job-grid a img {
+        width: 75px;
+    }
+
+    .find-right-job-grid a {
+        color: #55627b;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 100%;
+        display: block;
+    }
+
+.right-job-section {
+    margin-bottom: 100px;
+}
+
+    .right-job-section h2 {
+        color: #0d0e38;
+        font-size: 39px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+.right-job-right p {
+    color: #55627b;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    margin: 10px 0 0;
+}
+/* Right job section css ends */
+
+/* Back link css starts */
+.back-link-block {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 28px 70px 28px 90px;
+}
+
+    .back-link-block a {
+        color: #0c61e7;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+    }
+/* Back link css ends */
+/* Sign up section css starts */
+.sign-up-section {
+    margin: 50px 0px 100px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sign-up-block h1 {
+    color: #2d2c2f;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 60px;
+}
+
+.password-rules {
+    margin-bottom: 0px;
+    margin-top: 24px;
+}
+
+    .password-rules li {
+        color: #757575;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.3px;
+    }
+
+        .password-rules li.rule-passed,
+        .password-rules li.valid {
+            list-style-type: none;
+            position: relative;
+            color: #008a00;
+        }
+
+        .password-rules li.invalid {
+            color: #da1010;
+        }
+
+        .password-rules li.rule-passed:before,
+        .password-rules li.valid:before {
+            background-image: url("../images/rule-passed.svg");
+            background-repeat: no-repeat;
+            background-position: left;
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -22px;
+            top: 3px;
+        }
+/* Sign up section css ends */
+
+/* Verification block css starts */
+.verification-msg {
+    display: flex;
+    align-items: center;
+}
+
+    .verification-msg span {
+        color: #0b8039;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.2px;
+        margin-left: 10px;
+    }
+
+.verify-link a {
+    color: #0c61e7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    margin-left: 54px;
+    text-decoration: none;
+}
+
+.resend-code {
+    color: #55627b;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+    .resend-code a {
+        text-decoration: none;
+    }
+/* Verification block css ends */
+/* Sign in section CSS starts */
+.forgot-password-url {
+    color: #0c61e7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+}
+
+.sign-in-terms {
+    color: #55627b;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.3px;
+}
+/* Sign in section CSS ends */
+/* Contact Us page CSS starts */
+.contact-us-desc {
+    color: #2d2c2f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Contact Us page CSS ends */
+
+/* About us page start */
+.who-we-are-banner {
+    margin: 50px auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.about-us-title {
+    font-family: Poppins;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2d2c2f;
+}
+
+.about-us-paragraph {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #494848;
+}
+
+.about-us-title h1,
+.about-us-title h2 {
+    color: #0d0e38;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.about-us-title p {
+    color: #55627b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+}
+
+.rangam-wk-bg {
+    background: #fbfbff;
+}
+
+.mt-5 {
+    margi-top: 50px;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-13 {
+    font-size: 13px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-15 {
+    font-size: 15px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+
+.f-17 {
+    font-size: 17px;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.f-19 {
+    font-size: 19px;
+}
+
+.f-20 {
+    font-size: 20px;
+}
+
+.f-21 {
+    font-size: 21px;
+}
+
+.f-22 {
+    font-size: 22px;
+}
+
+.f-23 {
+    font-size: 23px;
+}
+
+.f-24 {
+    font-size: 24px;
+}
+
+.f-25 {
+    font-size: 25px;
+}
+
+.f-26 {
+    font-size: 26px;
+}
+
+.f-28 {
+    font-size: 28px;
+}
+
+.f-29 {
+    font-size: 29px;
+}
+
+.f-30 {
+    font-size: 30px;
+}
+
+.f-32 {
+    font-size: 32px;
+}
+
+.f-34 {
+    font-size: 34px;
+}
+
+.f-36 {
+    font-size: 36px;
+}
+
+.f-38 {
+    font-size: 38px;
+}
+
+.f-40 {
+    font-size: 40px;
+}
+
+.fw-1 {
+    font-weight: 100;
+}
+
+.fw-2 {
+    font-weight: 200;
+}
+
+.fw-3 {
+    font-weight: 300;
+}
+
+.fw-4 {
+    font-weight: 400;
+}
+
+.fw-5 {
+    font-weight: 500;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.fw-7 {
+    font-weight: 700;
+}
+
+.fw-8 {
+    font-weight: 800;
+}
+
+.fw-9 {
+    font-weight: 900;
+}
+
+/*-----------------*/
+
+/* What We Offer page start */
+.what-we-offer-section {
+    margin: 50px auto;
+    padding: 50px 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+.employment-support-bg {
+    background-color: #fefbf3;
+}
+
+.employment-support-box {
+    padding: 25px;
+    border-radius: 16px;
+    background: #feefe2;
+    text-align: center;
+    margin: 1 rem;
+    height: 100%;
+}
+
+.employment-support-sub-title {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2d2c2f;
+}
+
+.padding-left-3 {
+    padding-left: 10px;
+}
+
+.employment-support-box ul li,
+.employment-support-box p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.list {
+    list-style-type: none;
+    justify-content: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .list > li {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: left;
+    }
+
+.point {
+    margin-right: 10px;
+}
+
+.what-we-offer-hr {
+    border: 2px solid gray;
+    margin-top: 100px;
+}
+/*-----------------*/
+
+/* Education and Training section css starts */
+.education-and-training-section {
+    padding: 50px 0px;
+}
+
+/*.education-and-training-img {
+  mix-blend-mode: darken;
+}*/
+
+.education-and-training h2 {
+    color: #0d0e38;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 520px;
+}
+
+.education-and-training-paragraph {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #55627b;
+}
+
+.education-and-training ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .education-and-training ul li {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #55627b;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: flex-start;
+    }
+
+        .education-and-training ul li span {
+            margin-left: 7px;
+        }
+/*-----------------*/
+
+/* Partners employers page */
+.employer-partners-bg {
+    background: #f5fbf2;
+    padding: 50px 0px;
+}
+
+/*-----------------*/
+
+/* FAQ */
+
+.faq-section .mb-0 > a {
+    display: block;
+    position: relative;
+}
+
+    .faq-section .mb-0 > a:after {
+        content: "\f4fe";
+        font-family: bootstrap-icons !important;
+        color: black;
+        position: absolute;
+        right: 0;
+        font-weight: 600;
+        text-decoration: none;
+        top: 0;
+    }
+
+    .faq-section .mb-0 > a[aria-expanded="true"]:after {
+        content: "\f2ea";
+        font-family: bootstrap-icons !important;
+        color: black;
+        font-weight: 600;
+    }
+
+.faq-title h1 {
+    font-family: Poppins;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2d2c2f;
+}
+
+.faq-que {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #000;
+    padding-right: 20px;
+}
+
+.faq-ans {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #55627b;
+}
+
+.faq-ans-title {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0d0e38;
+}
+/* Trained page */
+.training-banner {
+    background: #f6fafc;
+    padding: 50px 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+.rw-learning-hub h1 {
+    color: #0d0e38;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.training-title-section {
+    background-color: #e9f1f7;
+}
+
+.training-heading h1,
+.training-heading h2 {
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.rw-learning-hub p {
+    color: #55627b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    max-width: 535px;
+}
+
+.video-title {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin: 5px;
+}
+
+.video-banner {
+    margin: 50px auto;
+    padding: 50px 0px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 0.7;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#readMoreBtn {
+    display: none !important;
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .back-link-block {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .how-can-help h2 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-section {
+        margin: 50px 0px 50px;
+    }
+
+    .what-it-takes-section {
+        margin-bottom: 50px;
+    }
+
+    .how-can-help-section {
+        margin-bottom: 50px;
+        padding: 30px 0px;
+    }
+
+    .right-job-section {
+        margin-bottom: 50px;
+    }
+
+    .sign-up-block h1 {
+        margin-bottom: 20px;
+    }
+
+    .how-can-help .btns {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sign-up-section {
+        margin: 50px 0px;
+    }
+
+    .video-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .training-slider {
+        position: relative;
+    }
+
+    .read-more-btn {
+        color: var(--primary);
+        padding-left: 3px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #readMoreBtn1 {
+        display: inline !important;
+    }
+
+    .training-slider p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .faq-que {
+        font-size: 16px;
+    }
+
+    .faq-ans {
+        font-size: 14px;
+    }
+
+    .home-search-block {
+        flex-wrap: wrap;
+        padding: 15px;
+        gap: 0;
+    }
+
+    .job-keyword-input {
+        padding-right: 0px;
+        width: 100%;
+        border: 1px solid var(--grey2) !important;
+        margin-bottom: 10px;
+    }
+
+    .city-state {
+        width: 100%;
+        border: 1px solid var(--grey2) !important;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .search-section {
+        margin: 50px 0px;
+    }
+
+    .what-it-takes h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .what-it-takes p {
+        font-size: 16px;
+    }
+
+    .what-it-takes-section,
+    .right-job-step,
+    .right-job-section {
+        margin-bottom: 20px;
+    }
+
+    .how-can-help-section {
+        margin-bottom: 20px;
+        padding: 20px 0px;
+    }
+
+    .how-can-help h2 {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    .how-can-help .offer-btns a {
+        font-size: 14px;
+    }
+
+    .how-can-help ul li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .right-job-section h2,
+    .about-us-title {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .right-job-step span {
+        font-size: 18px;
+    }
+
+    .right-job-right p {
+        font-size: 16px;
+    }
+
+    .what-we-offer-section {
+        margin: 0px auto;
+        padding: 20px 0px;
+    }
+
+    .about-us-title h1,
+    .about-us-title h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .about-us-title p {
+        font-size: 16px;
+    }
+
+    .employment-support-box {
+        padding: 15px;
+    }
+
+    .employment-support-sub-title {
+        font-size: 20px;
+    }
+
+    .employment-support-box ul li,
+    .employment-support-box p {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .education-and-training-section {
+        padding: 20px 0px 0px;
+    }
+
+    .education-and-training h2 {
+        font-size: 26px;
+    }
+
+    .education-and-training-paragraph {
+        font-size: 16px;
+    }
+
+    .education-and-training ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+        .education-and-training ul li:last-child {
+            margin-bottom: 0px;
+        }
+
+    .what-we-offer-hr {
+        margin-top: 20px;
+    }
+
+    .who-we-are-banner {
+        margin: 0px auto;
+    }
+
+        .who-we-are-banner p.f-22 {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+
+        .who-we-are-banner p.f-20 {
+            font-size: 18px;
+        }
+
+    .about-us-paragraph {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+        .about-us-paragraph li {
+            margin-bottom: 10px;
+        }
+
+            .about-us-paragraph li:last-child {
+                margin-bottom: 0px;
+            }
+
+    .who-we-are-banner.who-we-are-page {
+        margin-bottom: 20px;
+    }
+
+    .employer-partners-bg {
+        padding: 20px 0px;
+    }
+
+    .rw-learning-hub h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .rw-learning-hub p {
+        font-size: 16px;
+    }
+
+    .training-heading h1,
+    .training-heading h2 {
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+
+    .video-banner {
+        margin: 0px auto;
+        padding: 20px 0px;
+    }
+
+    .faq-title h1 {
+        font-size: 26px;
+        line-height: normal;
+    }
+
+    .sign-up-section {
+        margin: 20px 0px;
+    }
+
+    .line-clamp-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 6px 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .verification-msg {
+        align-items: flex-start;
+    }
+
+    .verify-link a {
+        margin-left: 0px;
+    }
+
+    #expert {
+        width: 90%;
+    }
+
+    .find-right-job-grid a img {
+        width: 50px;
+    }
+
+    .find-right-job-grid a {
+        font-size: 18px;
+    }
+}
+
+.grecaptcha-badge {
+    width: 70px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    left: 4px !important;
+}
+
+.grecaptcha-badge {
+    width: 70px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    left: 4px !important;
+}
+
+    .grecaptcha-badge:hover {
+        width: 256px !important;
+    }
