@@ -82,16 +82,18 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="images/logo.png" as="image" type="image/png">
+    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
     <link rel="preload" href="css/critical.min.css" as="style">
     <link rel="preload" href="js/critical.min.js" as="script">
     
     <!-- Critical CSS inline -->
     <style>
-        /* Insert critical above-the-fold CSS here */
-        .navbar, .hero-section, .search-section {
-            /* Critical styles */ 
-        }
+        :root{--primary:#0C61E7;--white:#fff}
+        .navbar{padding:.2rem 2rem;max-width:1440px;margin:0 auto}
+        .navbar-brand{display:inline-block;padding-top:.3125rem}
+        .navbar-logo{max-width:140px;height:auto}
+        .search-section{padding:2rem 0;background:var(--primary)}
+        .form-control{border-radius:8px;padding:.375rem .75rem}
     </style>
     
     <!-- Optimized font loading -->
@@ -185,6 +187,8 @@
               src="images/logo.png"
               alt="RangamWorks logo"
               width="140"
+              fetchpriority="high"
+              decoding="async"
             />
           </a>
           <button
