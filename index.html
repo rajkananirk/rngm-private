@@ -898,5 +898,13 @@
 
 </script>
 
+<script>
+    window.addEventListener('load', () => {
+        // Log performance metrics
+        const navigation = performance.getEntriesByType('navigation')[0];
+        console.log(`Page Load Time: ${navigation.loadEventEnd}ms`);
+    });
+</script>
+
 </body>
 </html>
