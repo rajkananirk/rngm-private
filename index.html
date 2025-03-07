@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=2.0,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
+    
+    <!-- Inline critical CSS -->
+    <style>
+        /* Critical CSS */
+        :root {
+            --primary: #0C61E7;
+            --white: #fff;
+        }
+        
+        /* Minimal critical styles */
+        .navbar {
+            background: var(--white);
+            padding: 0.2rem 2rem;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Font loading optimization */
+        @font-face {
+            font-family: 'Open Sans';
+            font-display: swap;
+            src: local('Open Sans'), url('fonts/opensans.woff2') format('woff2');
+        }
+    </style>
 
-    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-    <meta http-equiv="PRAGMA" content="NO-CACHE">
-    <meta http-equiv="EXPIRES" content="0">
+    <!-- Defer all non-critical CSS -->
+    <link rel="stylesheet" href="css/combined.min.css" 
+          media="print" onload="this.media='all'">
+    
+    <!-- Remove all other CSS files and combine into combined.min.css -->
 
-    <!--  Javascript Declaration   -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="MobileOptimized" content="320">
 
@@ -73,44 +108,6 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-N6XSHPG');</script>-->
 
-    <!-- Combine all CSS into one minified file -->
-    <link href="css/combined.min.css" rel="stylesheet" />
-    
-    <!-- Load critical CSS inline -->
-    <style>
-        /* Critical CSS */
-        @font-face {
-            font-family: 'Open Sans';
-            font-display: swap;
-            src: local('Open Sans'), url('fonts/opensans.woff2') format('woff2');
-        }
-        
-        /* Add critical layout CSS */
-        .navbar {
-            padding: 0.2rem 2rem !important;
-            max-width: 1440px;
-            margin: 0px auto;
-        }
-        
-        /* Add other critical styles that prevent layout shifts */
-        .hero-section {
-            min-height: 400px;
-        }
-        
-        /* Remove all non-critical styles from here */
-    </style>
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="images/logo.png" as="image">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Defer non-critical CSS -->
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
-    
-    <!-- Remove duplicate CSS files and combine them -->
-    <!-- Remove: var.css, controls.css, footer.css, header.css, site.css, custom.css -->
-
     <!-- Add security headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -142,26 +139,10 @@
     }
     </script>
 
-    <!-- Inline critical CSS -->
-    <style>
-      /* Copy contents of critical.css here */
-    </style>
-    
-    <!-- Preload fonts -->
-    <link rel="preload" 
-          href="/fonts/opensans.woff2" 
-          as="font" 
-          type="font/woff2" 
-          crossorigin>
-    
-    <!-- Defer non-critical CSS -->
-    <link rel="stylesheet" 
-          href="css/combined.min.css" 
-          media="print" 
-          onload="this.media='all'">
-    <noscript>
-      <link rel="stylesheet" href="css/combined.min.css">
-    </noscript>
+    <!-- Add resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://staging.rangamworks.com" crossorigin>
+    <link rel="dns-prefetch" href="https://staging.rangamworks.com">
 </head>
 <body>
 
@@ -224,7 +205,8 @@
                      alt="RangamWorks logo"
                      width="140"
                      height="35"
-                     fetchpriority="high">
+                     fetchpriority="high"
+                     decoding="async">
             </picture>
           </a>
           <button
@@ -463,13 +445,13 @@
             </div>
             <div class="hero-right col-lg-6 text-center text-lg-end mt-4 mt-lg-0 d-none d-md-block">
                 <picture>
+                    <source srcset="images/what-it-takes.avif" type="image/avif">
                     <source srcset="images/what-it-takes.webp" type="image/webp">
-                    <source srcset="images/what-it-takes.png" type="image/png">
-                    <img class="what-it-takes-img mw-100" 
-                         src="images/what-it-takes.png" 
-                         alt="" 
+                    <img src="images/what-it-takes.png"
+                         alt=""
                          loading="lazy"
-                         width="600" 
+                         decoding="async"
+                         width="600"
                          height="400">
                 </picture>
             </div>
@@ -826,20 +808,31 @@
     <script>
         // Inline critical JS
         document.documentElement.classList.remove('no-js');
+        
+        // Defer non-critical script loading
+        function loadScript(src, async = true) {
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = async;
+            document.body.appendChild(script);
+        }
+        
+        // Load scripts after page load
+        window.addEventListener('load', () => {
+            loadScript('js/combined.min.js');
+            setTimeout(() => {
+                loadScript('https://code.jquery.com/jquery-3.7.1.min.js');
+            }, 1000);
+        });
     </script>
 
-    <!-- Load essential scripts with modern attributes -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-            crossorigin="anonymous" 
-            defer
-            fetchpriority="low"></script>
-
-    <!-- Combine all other scripts into one file -->
-    <script src="js/combined.min.js" 
-            defer 
-            fetchpriority="low"></script>
-
-    <!-- Remove all other script tags -->
+    <script>
+        // Monitor Core Web Vitals
+        addEventListener('DOMContentLoaded', function() {
+            webVitals.getCLS(console.log);
+            webVitals.getFID(console.log);
+            webVitals.getLCP(console.log);
+        });
+    </script>
 </body>
 </html>
