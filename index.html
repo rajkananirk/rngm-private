@@ -4,19 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
+    <!-- Preload only the most critical assets -->
+    <link rel="preload" as="image" href="images/logo.png" fetchpriority="high">
+    <link rel="modulepreload" href="js/combined.min.js">
     
-    <!-- Inline critical CSS -->
+    <!-- Inline all critical CSS to eliminate render-blocking resources -->
     <style>
-        /* Critical CSS */
+        /* Minimal critical CSS only */
         :root {
             --primary: #0C61E7;
             --white: #fff;
         }
         
-        /* Minimal critical styles */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
         .navbar {
             background: var(--white);
             padding: 0.2rem 2rem;
@@ -31,19 +35,31 @@
             padding: 0 1rem;
         }
         
-        /* Font loading optimization */
-        @font-face {
-            font-family: 'Open Sans';
-            font-display: swap;
-            src: local('Open Sans'), url('fonts/opensans.woff2') format('woff2');
-        }
+        /* Add only above-the-fold styles */
     </style>
-
+    
     <!-- Defer all non-critical CSS -->
     <link rel="stylesheet" href="css/combined.min.css" 
-          media="print" onload="this.media='all'">
+          media="print" onload="this.media='all'"
+          fetchpriority="low">
     
-    <!-- Remove all other CSS files and combine into combined.min.css -->
+    <!-- Load fonts asynchronously -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        // Async font loading
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:400,600', 'Poppins:400,500,600']
+            }
+        };
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="MobileOptimized" content="320">
@@ -141,8 +157,15 @@
 
     <!-- Add resource hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://staging.rangamworks.com" crossorigin>
-    <link rel="dns-prefetch" href="https://staging.rangamworks.com">
+    
+    <!-- Prefetch next likely pages -->
+    <link rel="prefetch" href="/member/login">
+    <link rel="prefetch" href="/member/registration">
+    
+    <!-- DNS prefetch for third-party domains -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 
@@ -198,15 +221,15 @@
         <div class="container-fluid">
           <a class="navbar-brand m-0 p-0" href="/portal/oh" aria-current="page">
             <picture>
-                <source srcset="images/logo.avif" type="image/avif">
-                <source srcset="images/logo.webp" type="image/webp">
-                <img class="navbar-logo img-fluid"
-                     src="images/logo.png"
+                <source type="image/avif" srcset="images/logo.avif">
+                <source type="image/webp" srcset="images/logo.webp">
+                <img src="images/logo.png" 
                      alt="RangamWorks logo"
-                     width="140"
+                     width="140" 
                      height="35"
                      fetchpriority="high"
-                     decoding="async">
+                     decoding="async"
+                     loading="eager">
             </picture>
           </a>
           <button
@@ -399,11 +422,9 @@
                 <div class="col-xxl-10 col-xl-11 col-12">
                     <div class="home-search-block" role="search">
                         <div class="job-keyword-input">
-                            <img class="high-contrast-white" 
-                                 src="images/search-icon.svg" 
-                                 alt=""
-                                 width="24" 
-                                 height="24">
+                            <svg class="search-icon" width="24" height="24" aria-hidden="true">
+                                <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
                             <label for="keywords" class="form-label">Search Job Title or Keywords</label>
                             <input maxlength="200" type="text" id="keywords" name="keywords" class="form-control" aria-label="Search Job Title or Keywords" placeholder="Search Job Title or Keywords">
                         </div>
@@ -832,6 +853,29 @@
             webVitals.getCLS(console.log);
             webVitals.getFID(console.log);
             webVitals.getLCP(console.log);
+        });
+    </script>
+
+    <script type="module">
+        // Modern browsers - use ES modules
+        import { init } from './js/combined.min.js';
+        init();
+    </script>
+    <script nomodule>
+        // Legacy browsers - load transpiled version
+        document.write('<script src="js/combined.legacy.min.js"><\/script>');
+    </script>
+
+    <script>
+        // Defer non-critical operations
+        requestIdleCallback(() => {
+            // Analytics
+            loadScript('https://www.google-analytics.com/analytics.js');
+            
+            // Chat widget
+            setTimeout(() => {
+                loadScript('js/chat.min.js');
+            }, 3000);
         });
     </script>
 </body>

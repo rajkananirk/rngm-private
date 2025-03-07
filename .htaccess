@@ -54,4 +54,19 @@
 
 <FilesMatch "\.(js|css|ico|pdf|jpg|jpeg|png|gif|webp|avif)$">
     Header set Cache-Control "max-age=31536000, public"
-</FilesMatch> 
+</FilesMatch>
+
+# Preload critical assets
+<FilesMatch "index\.html$">
+    Header add Link "</css/critical.css>;rel=preload;as=style"
+    Header add Link "</js/combined.min.js>;rel=preload;as=script"
+</FilesMatch>
+
+# Enable Early Hints
+<IfModule mod_http2.c>
+    H2EarlyHints on
+</IfModule>
+
+# Optimize TTFB
+Header set X-DNS-Prefetch-Control "on"
+Header set X-Content-Type-Options "nosniff" 
