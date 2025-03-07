@@ -245,3 +245,15 @@ function applyReadMore() {
 
 applyReadMore(); // Run on page load
 window.addEventListener("resize", applyReadMore); // Re-apply on screen resize
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('ServiceWorker registered');
+      })
+      .catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}

@@ -78,18 +78,56 @@
     
     <!-- Load critical CSS inline -->
     <style>
-        /* Add critical CSS here */
-        header .navbar {
-            padding: 0.2rem 2rem !important;
-            max-width: 1440px;
-            margin: 0px auto;
-            justify-content: space-between;
+        /* Critical CSS */
+        @font-face {
+            font-family: 'Open Sans';
+            font-display: swap;
+            src: url('fonts/opensans.woff2') format('woff2');
         }
         /* Add other critical styles */
     </style>
     
+    <!-- Preload critical assets -->
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    
     <!-- Defer non-critical CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
+    
+    <!-- Remove duplicate CSS files and combine them -->
+    <!-- Remove: var.css, controls.css, footer.css, header.css, site.css, custom.css -->
+
+    <!-- Add security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <!-- Add proper meta tags -->
+    <meta name="description" content="RangamWorks helps you find meaningful job opportunities and supports your career goals with expert guidance and resources.">
+    <meta name="keywords" content="jobs, career, employment, job search, career guidance">
+    
+    <!-- Add Open Graph tags -->
+    <meta property="og:title" content="RangamWorks - Find Your Next Career Opportunity">
+    <meta property="og:description" content="RangamWorks helps you find meaningful job opportunities and supports your career goals.">
+    <meta property="og:image" content="https://rangamworks.com/images/og-image.jpg">
+    <meta property="og:url" content="https://rangamworks.com">
+    
+    <!-- Add Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RangamWorks - Find Your Next Career Opportunity">
+    <meta name="twitter:description" content="Find your next career opportunity with RangamWorks.">
+    
+    <!-- Add structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RangamWorks",
+        "url": "https://rangamworks.com",
+        "logo": "https://rangamworks.com/images/logo.png"
+    }
+    </script>
 </head>
 <body>
 
@@ -141,7 +179,7 @@
     }
 </style>
  <header id="header">
-      <nav class="navbar navbar-expand-xl navbar-light">
+      <nav class="navbar navbar-expand-xl navbar-light" aria-label="Main navigation">
         <div class="container-fluid">
           <a class="navbar-brand m-0 p-0" href="/portal/oh" aria-current="page">
             <img
@@ -157,6 +195,8 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -340,6 +380,7 @@
                     <div class="home-search-block" role="search">
                         <div class="job-keyword-input">
                             <img class="high-contrast-white" src="images/search-icon.svg" alt="">
+                            <label for="keywords" class="form-label">Search Job Title or Keywords</label>
                             <input maxlength="200" type="text" id="keywords" name="keywords" class="form-control" aria-label="Search Job Title or Keywords" placeholder="Search Job Title or Keywords">
                         </div>
                         <div class="city-state">
@@ -736,11 +777,13 @@
     </script>
 
     <!-- Load essential scripts first -->
-    <script src="lib/jquery/jquery-3.7.0.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous" defer></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     
     <!-- Combine and minify non-critical scripts -->
-    <script src="js/combined.min.js" defer></script>
+    <script type="module" src="js/combined.min.js" defer></script>
     
     <!-- Remove or defer non-essential scripts -->
     <!-- Remove duplicate jQuery loading -->
