@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Remove duplicate meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=2.0,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Find your dream job with RangamWorks. Access exclusive job listings and career resources.">
-    
-    <title>Home | RangamWorks</title>
 
-          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
-        <link href="lib/bootstrap/css/bootstrap-icons.css" rel="stylesheet" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+
+    <!--  Javascript Declaration   -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320">
+
+    <title>
+             Home | RangamWorks
+    </title>
+
+    <!--  START: SEO Meta Tag   -->
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="googlebot" content="noindex, nofollow">
+
+    <!--  END: SEO Meta Tag   -->
+
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="fonts/your-main-font.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/critical.css" as="style">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <link href="lib/ladda/dist/ladda-themeless.min.css" rel="stylesheet" />
     <link href="lib/izitoast/izitoast.min.css" rel="stylesheet" />
-    <!-- Preload critical assets -->
-    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
-    <link rel="preload" href="css/critical.min.css" as="style">
-    <link rel="preload" href="lib/bootstrap/css/bootstrap.min.css" as="style">
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://staging.rangamworks.com" crossorigin>
-    
-    <!-- Inline critical CSS -->
-    <style>
-        /* Minimal critical CSS */
-        :root{--primary:#0C61E7;--white:#fff}
-        body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
-        .navbar{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:.5rem}
-        .navbar-logo{width:140px;height:40px}
-        .search-section{background:var(--primary);padding:2rem 0}
-        .btn-primary{background:var(--primary);color:var(--white);padding:.5rem 1.5rem;border-radius:8px;text-decoration:none}
-        .form-control{width:100%;padding:.5rem;border-radius:8px;border:1px solid #ddd}
-    </style>
 
-    <!-- Load non-critical CSS asynchronously -->
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
 
-    <!-- Defer non-critical scripts -->
-    <script defer src="lib/jquery/jquery-3.7.0.min.js"></script>
-    <script defer src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Remove duplicate CSS files -->
-    <link href="critical.css" rel="stylesheet" />
     <link href="var.css?v=TDJzTUo8zkO9Opi9SZmLPkq8tltQ4KYjEhz1JEyKcTk" rel="stylesheet" />
     <link href="controls.css?v=_9xFW-eGNUdMaD75uSKM1Bkw0pTS7sDHkqedH7T9GU8" rel="stylesheet" />
     <link href="footer.css?v=I3LFeh7ZxYHiWcgesTZUTrIzksE1UWOACV1w7EE5SCs" rel="stylesheet" />
@@ -60,7 +52,7 @@
 
     
 
-    <link href="custom.css?v=X_rHPsuzYxDWDVPM9sC1tfjaaEB2-xNcS7kFXQSBhYE" rel="stylesheet" />
+    <link href="css/custom.css?v=X_rHPsuzYxDWDVPM9sC1tfjaaEB2-xNcS7kFXQSBhYE" rel="stylesheet" />
 
     <!-- Global site tag (gtag.js) - Google Analytics (Uncomment on Pfizer Poduction Portal Only) -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZWP3M0DK8"></script>
@@ -81,35 +73,27 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-N6XSHPG');</script>-->
 
-    <!-- Resource Hints -->
-    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
-    <link rel="preload" href="css/critical.min.css" as="style">
+    <!-- Combine all CSS into one minified file -->
+    <link href="css/combined.min.css" rel="stylesheet" />
     
-    <!-- Critical CSS -->
+    <!-- Load critical CSS inline -->
     <style>
-        /* Minimal critical CSS */
-        :root{--primary:#0C61E7;--white:#fff}
-        body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
-        .navbar{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:.5rem}
-        .navbar-logo{width:140px;height:40px}
-        .search-section{background:var(--primary);padding:2rem 0}
-        .btn-primary{background:var(--primary);color:var(--white);padding:.5rem 1.5rem;border-radius:8px;text-decoration:none}
-        .form-control{width:100%;padding:.5rem;border-radius:8px;border:1px solid #ddd}
+        /* Add critical CSS here */
+        header .navbar {
+            padding: 0.2rem 2rem !important;
+            max-width: 1440px;
+            margin: 0px auto;
+            justify-content: space-between;
+        }
+        /* Add other critical styles */
     </style>
-
-    <!-- Progressive CSS Loading -->
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
-
-    <!-- Deferred Scripts -->
-    <script defer src="lib/jquery/jquery-3.7.0.min.js"></script>
-    <script defer src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <meta name="description" content="Find your dream job with RangamWorks. Access exclusive job listings and career resources.">
+    
+    <!-- Defer non-critical CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
 </head>
 <body>
 
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEdLZoExodYgAkhKSLeSNrxoEBH5cEL2IZAsWAciAR012zlNxO7x8guY53VuakoQxcZrCpVUriVr6YerwN7nRPssfBXYoVdGvt_smQhjZOscyREOC3GN7_EMSnZujndHRSM" />
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEf6I5Bw3g3urRMWXuiTPf47bz6YlgQbu1K3hWJfPR-y0gTDoqgw9beanilgizmXmH6HQ0eNAW32BsJibVGv8DPzzNIcLLUAC0ke56B0FNtS0mT4i4zy9qZ14jBfYYcN_fY" />
 
     <input type="hidden" id="HdDomainDirectory" value="oh" />
     <input type="hidden" id="HdEnablePasscode" value="false" />
@@ -159,15 +143,12 @@
  <header id="header">
       <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand m-0 p-0" href="portal/oh" aria-current="page">
+          <a class="navbar-brand m-0 p-0" href="/portal/oh" aria-current="page">
             <img
               class="navbar-logo img-fluid"
               src="images/logo.png"
               alt="RangamWorks logo"
               width="140"
-              height="40"
-              fetchpriority="high"
-              decoding="async"
             />
           </a>
           <button
@@ -224,7 +205,7 @@
             </div>
             <ul class="navbar-nav justify-content-center">
               <li class="nav-item">
-                <a id="linkHome" class="nav-link" href="portal/oh">Home</a>
+                <a id="linkHome" class="nav-link" href="/portal/oh">Home</a>
               </li>
               <li class="nav-item">
                 <a
@@ -247,19 +228,19 @@
                 >
                 <ul class="dropdown-menu" aria-labelledby="AboutUs">
                   <li>
-                    <a class="dropdown-item" href="portal/oh/about"
+                    <a class="dropdown-item" href="/portal/oh/about"
                       >Who We Are</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="portal/oh/service"
+                    <a class="dropdown-item" href="/portal/oh/service"
                       >What We Offer</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="portal/oh/partners-employers"
+                      href="/portal/oh/partners-employers"
                       >Partners &amp; Employers</a
                     >
                   </li>
@@ -279,22 +260,22 @@
                 >
                 <ul class="dropdown-menu" aria-labelledby="ResourcesDropdown">
                   <li>
-                    <a class="dropdown-item" href="portal/oh/training"
+                    <a class="dropdown-item" href="/portal/oh/training"
                       >Training</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="portal/oh/faqs">FAQs</a>
+                    <a class="dropdown-item" href="/portal/oh/faqs">FAQs</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="portal/oh/refertalent"
+                    <a class="dropdown-item" href="/portal/oh/refertalent"
                       >Refer Someone</a
                     >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a id="linkContact" class="nav-link" href="portal/oh/contact"
+                <a id="linkContact" class="nav-link" href="/portal/oh/contact"
                   >Contact Us</a
                 >
               </li>
@@ -302,12 +283,12 @@
               <li class="nav-item d-block d-xl-none">
                 <a
                   class="nav-link text-primary"
-                  href="portal/oh/member/registration"
+                  href="/portal/oh/member/registration"
                   >Sign Up</a
                 >
               </li>
               <li class="nav-item d-block d-xl-none">
-                <a class="nav-link text-primary" href="portal/oh/member/login"
+                <a class="nav-link text-primary" href="/portal/oh/member/login"
                   >Log In</a
                 >
               </li>
@@ -320,12 +301,12 @@
               <li class="nav-item">
                 <a
                   class="btn-primary text-decoration-none"
-                  href="portal/oh/member/registration"
+                  href="/portal/oh/member/registration"
                   >Sign Up</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-primary" href="portal/oh/member/login"
+                <a class="nav-link text-primary" href="/portal/oh/member/login"
                   >Log In</a
                 >
               </li>
@@ -372,7 +353,7 @@
                 </div>
             </div>
         </div>
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEdLZoExodYgAkhKSLeSNrxoEBH5cEL2IZAsWAciAR012zlNxO7x8guY53VuakoQxcZrCpVUriVr6YerwN7nRPssfBXYoVdGvt_smQhjZOscyREOC3GN7_EMSnZujndHRSM" /></form>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEf6I5Bw3g3urRMWXuiTPf47bz6YlgQbu1K3hWJfPR-y0gTDoqgw9beanilgizmXmH6HQ0eNAW32BsJibVGv8DPzzNIcLLUAC0ke56B0FNtS0mT4i4zy9qZ14jBfYYcN_fY" /></form>
 </section><h1 class="sr-only">Welcome To RangamWorks</h1>
 <section class="what-it-takes-section">
     <div class="container">
@@ -383,8 +364,8 @@
                     <p class="mb-4 mx-auto line-clamp-3">Having a meaningful job impacts everything in your life.  You are here to create a better future for you and your family. RangamWorks will support your job search and career goals.</p>
                 </div>
                 <div class="btns mt-3 d-flex justify-content-evenly">
-                        <a href="portal/oh/member/registration" class="btn-primary text-decoration-none d-inline-block">Sign Up</a>
-                        <a href="portal/oh/member/login" class="btn-secondary text-decoration-none d-inline-block">Log In</a>
+                        <a href="/portal/oh/member/registration" class="btn-primary text-decoration-none d-inline-block">Sign Up</a>
+                        <a href="/portal/oh/member/login" class="btn-secondary text-decoration-none d-inline-block">Log In</a>
                     </div>
 <img
               style="opacity: 0.1"
@@ -394,7 +375,16 @@
             />               
             </div>
             <div class="hero-right col-lg-6 text-center text-lg-end mt-4 mt-lg-0 d-none d-md-block">
-                <img class="what-it-takes-img mw-100" src="images/what-it-takes.png" alt="" title="" loading="lazy" width="600" height="400">
+                <picture>
+                    <source srcset="images/what-it-takes.webp" type="image/webp">
+                    <source srcset="images/what-it-takes.png" type="image/png">
+                    <img class="what-it-takes-img mw-100" 
+                         src="images/what-it-takes.png" 
+                         alt="" 
+                         loading="lazy"
+                         width="600" 
+                         height="400">
+                </picture>
             </div>
         </div>
     </div>
@@ -404,7 +394,7 @@
           <div class="col-lg-6 text-center mb-4 mb-lg-0 d-none d-md-block">
             <img
               class="mw-100"
-              src="images/how-can-help.png"
+              src="https://staging.rangamworks.com/portal/tenant/oh/images/how-can-help.png"
             />
           </div>
           <div class="col-lg-6 px-3 position-relative py-4 py-lg-0">
@@ -423,7 +413,7 @@
                 </li>
                 <li class="d-flex gap-2">
                   <img
-                        src="images/right-mark.svg"
+                    src="images/right-mark.svg"
                     width="24"
                     class="high-contrast-white"
                   />
@@ -453,12 +443,12 @@
               </ul>
               <div class="d-flex gap-3 mt-3 offer-btns">
                 <a
-                  href="portal/oh/service"
+                  href="/portal/oh/service"
                   class="btn btn-secondary px-1 px-md-4 py-2 w-100 w-md-auto"
                   >What we Offer</a
                 >
                 <a
-                  href="portal/oh/about"
+                  href="/portal/oh/about"
                   class="btn btn-secondary px-1 px-md-4 py-2 w-100 w-md-auto"
                   >About Us</a
                 >
@@ -467,7 +457,7 @@
             <img
               style="opacity: 0.1"
               class="what-it-takes-img img-fluid mw-100 rounded position-absolute top-0 start-0 w-100 h-100 object-fit-cover d-block d-md-none"
-              src="https://staging.rangamworks.com/images/how-can-help.png"
+              src="https://staging.rangamworks.com/portal/tenant/oh/images/how-can-help.png"
               alt=""
             />
           </div>
@@ -481,7 +471,7 @@
             <div class="find-right-job-grid d-grid gap-1 gap-md-3">
               <a
                 class="text-center d-flex flex-column gap-1 justify-content-center align-items-cente align-items-center text-decoration-none"
-                href="portal/oh/member/registration"
+                href="/portal/oh/member/registration"
                 ><img
                   class="img-fluid"
                   src="images/create-account.png"
@@ -498,7 +488,7 @@
                 <span>Search for Jobs</span></a
               >
               <a
-                href="portal/oh/training"
+                href="/portal/oh/training"
                 class="text-center d-flex flex-column gap-1 justify-content-center align-items-center mt-4 mt-md-0 align-items-center text-decoration-none"
                 ><img
                   class="img-fluid"
@@ -508,7 +498,7 @@
               >
               <a
                 class="text-center d-flex flex-column gap-1 justify-content-center align-items-center mt-4 mt-md-0 align-items-center text-decoration-none"
-                href="portal/oh/contact"
+                href="/portal/oh/contact"
                 ><img
                   class="img-fluid"
                   src="images/support.png"
@@ -532,7 +522,7 @@
                 Find a job anytime, anywhere with RangamWorks free services!
               </p>
               <!--<div class="text-center mt-md-5 mt-3">
-                            <a href="portal/oh/member/registration" class="btn-primary text-decoration-none" >Create Account</a>
+                            <a href="/portal/oh/member/registration" class="btn-primary text-decoration-none" >Create Account</a>
                         </div>-->
             </div>
           </div>
@@ -561,9 +551,9 @@
       </div>
       <div class="footer-top-nav">
         <ul> 
-          <li><a href="portal/oh/training">Training</a></li>
-          <li><a href="portal/oh/faqs">FAQs</a></li>
-          <li><a href="portal/oh/contact">Contact Us</a></li>
+          <li><a href="/portal/oh/training">Training</a></li>
+          <li><a href="/portal/oh/faqs">FAQs</a></li>
+          <li><a href="/portal/oh/contact">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -572,10 +562,10 @@
     <div class="footer-copyright-block text-white text-center" >
       <ul class="list-inline mb-0 d-flex flex-wrap justify-content-center w-100 flex-column flex-md-row">					 
         <li class="list-item">© 2025 Driven by Rangam's TalentArbor Technology </li>
-        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="terms-of-use">Terms of Use</a> </li>
-        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="privacy-policy">Privacy Policy</a> </li>
-        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="cookie-policy">Cookie Policy</a> </li>
-        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="accessibility-statement">&nbsp;&nbsp;Accessibility Statement</a></li>
+        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="/terms-of-use">Terms of Use</a> </li>
+        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="/privacy-policy">Privacy Policy</a> </li>
+        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="/cookie-policy">Cookie Policy</a> </li>
+        <li class="list-item"><a class="text-white text-decoration-none" hreflang="en-us" href="/accessibility-statement">&nbsp;&nbsp;Accessibility Statement</a></li>
       </ul>
     </div>
   </section>
@@ -620,7 +610,7 @@
                     <button class="btn-secondary ladda-button" id="btnOpenRequestPasscode" data-style="slide-up">Request Passcode</button>
                 </div>
             </div>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEdLZoExodYgAkhKSLeSNrxoEBH5cEL2IZAsWAciAR012zlNxO7x8guY53VuakoQxcZrCpVUriVr6YerwN7nRPssfBXYoVdGvt_smQhjZOscyREOC3GN7_EMSnZujndHRSM" /></form>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEf6I5Bw3g3urRMWXuiTPf47bz6YlgQbu1K3hWJfPR-y0gTDoqgw9beanilgizmXmH6HQ0eNAW32BsJibVGv8DPzzNIcLLUAC0ke56B0FNtS0mT4i4zy9qZ14jBfYYcN_fY" /></form>
     </div>
 </div> <!-- Passcode modal popup design ends -->
 <!-- Request Passcode modal popup design starts -->
@@ -661,7 +651,7 @@
                     <button class="btn-secondary ladda-button" id="btnOpenPasscode" data-style="slide-up">Cancel</button>
                 </div>
             </div>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEdLZoExodYgAkhKSLeSNrxoEBH5cEL2IZAsWAciAR012zlNxO7x8guY53VuakoQxcZrCpVUriVr6YerwN7nRPssfBXYoVdGvt_smQhjZOscyREOC3GN7_EMSnZujndHRSM" /></form>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AdkgidTsr9EgoFfot09QEf6I5Bw3g3urRMWXuiTPf47bz6YlgQbu1K3hWJfPR-y0gTDoqgw9beanilgizmXmH6HQ0eNAW32BsJibVGv8DPzzNIcLLUAC0ke56B0FNtS0mT4i4zy9qZ14jBfYYcN_fY" /></form>
     </div>
 </div>
 <!-- Request Passcode modal popup design ends -->
@@ -745,22 +735,29 @@
         var UrlLocationByShortName = '/portal/oh/Base/GetLocationByShortName';
     </script>
 
-    <script src="portal/lib/jquery/jquery-3.7.0.min.js"></script>
-    <script src="portal/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Load essential scripts first -->
+    <script src="lib/jquery/jquery-3.7.0.min.js" defer></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     
-    <!-- Defer non-critical scripts -->
-    <script defer src="portal/lib/jquery-ui/jquery-ui.min.js"></script>
-    <script defer src="portal/lib/ladda/dist/spin.min.js"></script>
-    <script defer src="portal/lib/ladda/dist/ladda.min.js"></script>
-    <script defer src="portal/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- Combine and minify non-critical scripts -->
+    <script src="js/combined.min.js" defer></script>
     
-    <!-- Add performance monitoring -->
+    <!-- Remove or defer non-essential scripts -->
+    <!-- Remove duplicate jQuery loading -->
+    <!-- Combine small JS files -->
+
     <script>
-        window.addEventListener('load', () => {
-            // Log performance metrics
-            const navigation = performance.getEntriesByType('navigation')[0];
-            console.log(`Page Load Time: ${navigation.loadEventEnd}ms`);
+        // Defer chatbot loading
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                // Load chatbot after 2 seconds
+                loadChatbot();
+            }, 2000);
         });
+        
+        function loadChatbot() {
+            // Your existing chatbot loading code
+        }
     </script>
 </body>
 </html>
