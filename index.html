@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +73,32 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-N6XSHPG');</script>-->
+
+    <!-- Resource Hints -->
+    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="css/critical.min.css" as="style">
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Minimal critical CSS */
+        :root{--primary:#0C61E7;--white:#fff}
+        body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5}
+        .navbar{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:.5rem}
+        .navbar-logo{width:140px;height:40px}
+        .search-section{background:var(--primary);padding:2rem 0}
+        .btn-primary{background:var(--primary);color:var(--white);padding:.5rem 1.5rem;border-radius:8px;text-decoration:none}
+        .form-control{width:100%;padding:.5rem;border-radius:8px;border:1px solid #ddd}
+    </style>
+
+    <!-- Progressive CSS Loading -->
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
+
+    <!-- Deferred Scripts -->
+    <script defer src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script defer src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <meta name="description" content="Find your dream job with RangamWorks. Access exclusive job listings and career resources.">
 </head>
 <body>
 
@@ -86,7 +109,6 @@
     <input type="hidden" id="HdPasscode" />
     <input type="hidden" id="HdAgreeToLimitedAccess" />
     <input type="hidden" id="HdPasscodeCaseSensitve" value="false" />
-    <input type="hidden" id="GoogleGeoKey" value="AIzaSyBP_ntqiEK7mbJNrVvDtmUj89OVkS9E3X4" />
 
     
 
@@ -136,6 +158,9 @@
               src="images/logo.png"
               alt="RangamWorks logo"
               width="140"
+              height="40"
+              fetchpriority="high"
+              decoding="async"
             />
           </a>
           <button

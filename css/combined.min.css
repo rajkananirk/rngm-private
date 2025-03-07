@@ -1,0 +1,76 @@
+/* Base styles */
+:root {
+  --primary: #0C61E7;
+  --secondary: #2A42E4;
+  --white: #fff;
+  --black: #000;
+  --grey: #B7B7B7;
+  --transition: .3s ease;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Components */
+.navbar {
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form-control {
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Utilities */
+.text-center { text-align: center }
+.d-flex { display: flex }
+.align-items-center { align-items: center }
+.justify-content-between { justify-content: space-between }
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar-toggler,
+  .search-section {
+    display: none;
+  }
+} 
