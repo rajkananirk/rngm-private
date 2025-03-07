@@ -926,5 +926,14 @@
 
 </script>
 
+<script>
+    // Add performance monitoring
+    if (window.performance) {
+        const navigation = performance.getEntriesByType('navigation')[0];
+        const paint = performance.getEntriesByType('paint');
+        console.log(`Page load time: ${navigation.loadEventEnd}ms`);
+    }
+</script>
+
 </body>
 </html>
